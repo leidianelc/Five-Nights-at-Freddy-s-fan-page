@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Five Nights at Freddy's fan page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- TELA INICIAL -->
+<div class="overlay" id="startScreen">
+    <h1 class="tituloEntrada neon">Five Nights at Freddy's fan page</h1>
+    <button id="btnStart">ENTRAR NA PIZZARIA</button>
+</div>
+
+<button id="btnSom">🔊 SOM</button>
+
+<audio id="somAmbiente" src="audio/som.m4a" loop></audio>
+<audio id="somSusto" src="audio/susto.m4a"></audio>
+
+<img id="jumpscare" src="imagens/freddyjump.gif">
+
+<div class="scanlines"></div>
+
+<h1 class="letreiro neon">Restaurante Freddy Fazbear's Pizza</h1>
+
+<section class="conteudo">
+
+    <img src="imagens/fnaf1.png" class="fundo">
+
+    <!-- PERSONAGENS -->
+    <div class="personagens">
+
+        <div class="card" onclick="ativarJumpscare()">
+            <img src="imagens/freddy.png">
+            <h3>Freddy Fazbear</h3>
+            <p>Líder dos animatrônicos e símbolo da pizzaria.</p>
+        </div>
+
+        <div class="card" onclick="ativarJumpscare()">
+            <img src="imagens/bonnie.png">
+            <h3>Bonnie</h3>
+            <p>O coelho roxo, geralmente o primeiro a se mover.</p>
+        </div>
+
+        <div class="card" onclick="ativarJumpscare()">
+            <img src="imagens/chica.png">
+            <h3>Chica</h3>
+            <p>A galinha amarela que carrega sua cupcake.</p>
+        </div>
+
+        <div class="card" onclick="ativarJumpscare()">
+            <img src="imagens/foxy.png">
+            <h3>Foxy</h3>
+            <p>Rápido, agressivo e imprevisível.</p>
+        </div>
+
+    </div>
+
+    <!-- HISTÓRIA -->
+    <div class="descricao">
+        <h2 class="neon">📜 História</h2>
+        <p>
+            Five Nights at Freddy’s se passa em uma pizzaria aparentemente inocente,
+            onde animatrônicos ganham vida durante a noite.
+        </p>
+    </div>
+
+    <!-- CURIOSIDADES -->
+    <div class="descricao">
+        <h2 class="neon">👁️ Curiosidades</h2>
+        <ul>
+            <li>Os animatrônicos só se movem quando você não está olhando.</li>
+            <li>Foxy fica mais rápido conforme as noites.</li>
+            <li>Som é essencial para sobreviver.</li>
+        </ul>
+    </div>
+
+    <!-- AVISO -->
+    <div class="descricao aviso">
+        <h2 class="neon">⚠️ Aviso da Pizzaria</h2>
+        <p>
+            A gerência não se responsabiliza por danos físicos,
+            psicológicos ou desaparecimentos após meia-noite.
+        </p>
+    </div>
+
+</section>
+
+<script src="js/script.js"></script>
+</body>
+</html>

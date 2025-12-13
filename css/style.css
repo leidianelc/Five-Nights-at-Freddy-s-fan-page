@@ -1,0 +1,177 @@
+/* CURSOR FUNCIONAL */
+* {
+    cursor: crosshair;
+}
+
+body {
+    margin: 0;
+    background: black;
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    cursor: inherit;
+}
+
+/* NEON */
+.neon {
+    color: #fff;
+    text-shadow:
+        0 0 5px red,
+        0 0 10px red,
+        0 0 25px crimson;
+}
+
+/* TELA INICIAL */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.tituloEntrada {
+    font-family: 'Creepster', cursive;
+    font-size: 55px;
+}
+
+#btnStart {
+    background: red;
+    color: white;
+    padding: 15px 25px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+/* BOTÃO SOM */
+#btnSom {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+/* LETREIRO */
+.letreiro {
+    font-family: 'Creepster', cursive;
+    font-size: 42px;
+    margin-top: 20px;
+    animation: piscar .9s infinite;
+}
+
+@keyframes piscar {
+    50% { opacity: .3; }
+}
+
+/* FUNDO */
+.fundo {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+
+/* PERSONAGENS */
+.personagens {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.card {
+    background: rgba(0,0,0,0.85);
+    border: 2px solid red;
+    border-radius: 12px;
+    width: 240px;
+    height: 360px;
+
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 160px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.card h3 {
+    font-family: 'Creepster', cursive;
+    color: red;
+    margin: 10px 0 5px;
+}
+
+.card p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* DESCRIÇÕES */
+.descricao {
+    background: rgba(0,0,0,0.75);
+    padding: 20px;
+    margin: 40px auto;
+    width: 85%;
+    border: 2px solid red;
+    border-radius: 10px;
+}
+
+.descricao ul {
+    list-style: none;
+    padding: 0;
+}
+
+.descricao li::before {
+    content: "• ";
+    color: red;
+}
+
+/* AVISO */
+.aviso {
+    border-color: darkred;
+}
+
+/* JUMPSCARE */
+#jumpscare {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+    z-index: 999;
+}
+
+#jumpscare.show {
+    display: block;
+}
+
+/* SCANLINES */
+.scanlines {
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.03),
+        rgba(255,255,255,0.03) 1px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
