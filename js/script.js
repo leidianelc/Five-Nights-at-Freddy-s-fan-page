@@ -7,7 +7,8 @@ const btnSom = document.getElementById("btnSom");
 let somLigado = true;
 
 btnStart.onclick = () => {
-    somAmbiente.play();
+    somAmbiente.volume = 0.5;
+    somAmbiente.play().catch(() => {});
     startScreen.style.display = "none";
 };
 
@@ -22,11 +23,15 @@ btnSom.onclick = () => {
     somLigado = !somLigado;
 };
 
-function ativarJumpscare() {
-    const j = document.getElementById("jumpscare");
-    j.classList.add("show");
+function ativarJumpscare(id) {
+    const jump = document.getElementById(id);
+    if (!jump) return;
+
+    jump.classList.add("show");
     somSusto.currentTime = 0;
     somSusto.play();
 
-    setTimeout(() => j.classList.remove("show"), 800);
+    setTimeout(() => {
+        jump.classList.remove("show");
+    }, 800);
 }

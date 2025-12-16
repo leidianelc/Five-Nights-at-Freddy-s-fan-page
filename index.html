@@ -2,7 +2,8 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Five Nights at Freddy's fan page</title>
+    <title>Five Nights at Freddy's Fan Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -11,7 +12,7 @@
 
 <!-- TELA INICIAL -->
 <div class="overlay" id="startScreen">
-    <h1 class="tituloEntrada neon">Five Nights at Freddy's fan page</h1>
+    <h1 class="tituloEntrada neon">Five Nights at Freddy's</h1>
     <button id="btnStart">ENTRAR NA PIZZARIA</button>
 </div>
 
@@ -20,7 +21,11 @@
 <audio id="somAmbiente" src="audio/som.m4a" loop></audio>
 <audio id="somSusto" src="audio/susto.m4a"></audio>
 
-<img id="jumpscare" src="imagens/freddyjump.gif">
+<!-- JUMPSCARES -->
+<img id="freddyjump" class="jumpscare" src="imagens/freddyjump.gif">
+<img id="bonniejump" class="jumpscare" src="imagens/bonniejump.gif">
+<img id="chicajump" class="jumpscare" src="imagens/chicajump.gif">
+<img id="foxxyjump" class="jumpscare" src="imagens/foxxyjump.gif">
 
 <div class="scanlines"></div>
 
@@ -33,25 +38,25 @@
     <!-- PERSONAGENS -->
     <div class="personagens">
 
-        <div class="card" onclick="ativarJumpscare()">
+        <div class="card" onclick="ativarJumpscare('freddyjump')">
             <img src="imagens/freddy.png">
             <h3>Freddy Fazbear</h3>
             <p>Líder dos animatrônicos e símbolo da pizzaria.</p>
         </div>
 
-        <div class="card" onclick="ativarJumpscare()">
+        <div class="card" onclick="ativarJumpscare('bonniejump')">
             <img src="imagens/bonnie.png">
             <h3>Bonnie</h3>
             <p>O coelho roxo, geralmente o primeiro a se mover.</p>
         </div>
 
-        <div class="card" onclick="ativarJumpscare()">
+        <div class="card" onclick="ativarJumpscare('chicajump')">
             <img src="imagens/chica.png">
             <h3>Chica</h3>
             <p>A galinha amarela que carrega sua cupcake.</p>
         </div>
 
-        <div class="card" onclick="ativarJumpscare()">
+        <div class="card" onclick="ativarJumpscare('foxxyjump')">
             <img src="imagens/foxy.png">
             <h3>Foxy</h3>
             <p>Rápido, agressivo e imprevisível.</p>

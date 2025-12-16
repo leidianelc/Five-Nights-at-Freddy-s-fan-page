@@ -1,4 +1,4 @@
-/* CURSOR FUNCIONAL */
+/* CURSOR ESTILO JOGO */
 * {
     cursor: crosshair;
 }
@@ -9,7 +9,6 @@ body {
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
-    cursor: inherit;
 }
 
 /* NEON */
@@ -53,7 +52,6 @@ body {
     top: 10px;
     right: 10px;
     z-index: 5;
-    cursor: pointer;
 }
 
 /* LETREIRO */
@@ -73,7 +71,6 @@ body {
     width: 100%;
     max-height: 400px;
     object-fit: cover;
-    margin-top: 20px;
 }
 
 /* PERSONAGENS */
@@ -91,18 +88,19 @@ body {
     border-radius: 12px;
     width: 240px;
     height: 360px;
-
     padding: 15px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
 
-    transition: transform .2s;
+    transition: transform .2s, box-shadow .2s;
 }
 
 .card:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px red;
 }
 
 .card img {
@@ -114,12 +112,10 @@ body {
 .card h3 {
     font-family: 'Creepster', cursive;
     color: red;
-    margin: 10px 0 5px;
 }
 
 .card p {
     font-size: 14px;
-    opacity: 0.9;
 }
 
 /* DESCRIÇÕES */
@@ -148,7 +144,7 @@ body {
 }
 
 /* JUMPSCARE */
-#jumpscare {
+.jumpscare {
     position: fixed;
     inset: 0;
     width: 100%;
@@ -158,7 +154,7 @@ body {
     z-index: 999;
 }
 
-#jumpscare.show {
+.jumpscare.show {
     display: block;
 }
 
